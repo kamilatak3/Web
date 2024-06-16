@@ -13,17 +13,13 @@
         <button type="submit">Submit</button>
     </form>
 
-    <button id="fetch-data">Fetch Data</button>
-    <div id="data"></div>
-
-    <script>
-        document.getElementById('fetch-data').addEventListener('click', function() {
-            fetch('/api/data')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('data').innerText = JSON.stringify(data);
-                });
-        });
-    </script>
+    
+    <form action="/api/data" method="GET">
+        <button id="fetch-data">Fetch Data</button>
+        <textarea id="data" name="data">existing</textarea>
+    </form>
+    
+    
+    <script src="index.js"></script>
 </body>
 </html>

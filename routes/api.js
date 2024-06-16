@@ -3,7 +3,8 @@ const router = express.Router();
 
 // Handle GET request
 router.get('/data', (req, res) => {
-    res.json({ message: 'This is a GET request' });
+    const newData = 'new data';
+    res.send(newData);
 });
 
 // Handle POST request
